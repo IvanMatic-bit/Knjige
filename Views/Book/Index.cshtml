@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<br />
+<br />
+
+<a asp-action="Create" asp-controller="Book" class="btn btn-primary form-control text-white col-3 offset-9">Unesi novu knjigu</a>
+<h1>Tabela Knjiga</h1>
+<table id="" class="table table-striped table-bordered">
+    <thead class="table-secondary col-12">
+    <th>Naziv</th>
+    <th>Autor</th>
+    <th>ISBN</th>
+    <th></th>
+    </thead>
+    <tbody id="DT_load">
+
+    </tbody>
+</table>
+
+@section Scripts
+{
+    <script src="~/js/BookList.js"></script>
+}

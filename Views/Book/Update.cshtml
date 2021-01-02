@@ -1,0 +1,71 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Biblioteka.Models.Book
+@{
+}
+<br />
+<br />
+<br />
+<br />
+<div class="container w-75 border">
+
+    <br />
+    <br />
+    <h1>Izmjena podataka</h1>
+    <br />
+    <br />
+    <br />
+    <form method="post" asp-action="updatedb">
+        <br />
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Name"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Author"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Author" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ISBN"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="ISBN" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span asp-validation-for="ISBN" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row offset-3">
+
+            <button type="submit" class="btn btn-success text-white col-3">Uredi</button>
+
+            <a asp-action="Index" class="btn btn-primary col-3 offset-2">Nazad</a>
+
+
+        </div>
+
+    </form>
+
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
